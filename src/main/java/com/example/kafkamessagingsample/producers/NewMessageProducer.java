@@ -7,14 +7,14 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MessageProducer {
+public class NewMessageProducer {
 
-    private static final Logger logger = LoggerFactory.getLogger(MessageProducer.class);
+    private static final Logger logger = LoggerFactory.getLogger(NewMessageProducer.class);
 
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final String topic;
 
-    public MessageProducer(@Value("${kafka.users.topic}") final String topic, final KafkaTemplate<String, String> kafkaTemplate) {
+    public NewMessageProducer(@Value("${kafka.jessica-jones-1.topic}") final String topic, final KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
         this.topic = topic;
     }
